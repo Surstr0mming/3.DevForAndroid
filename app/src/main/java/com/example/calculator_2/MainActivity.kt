@@ -299,7 +299,6 @@ class MainActivity : AppCompatActivity() {
             Log.d(TAG, "нажато nine")
         } }
 
-        //закинути в память
         mplus.setOnClickListener {
             val exp = expression.text.toString()
             val engine: ScriptEngine = ScriptEngineManager().getEngineByName("rhino")
@@ -313,7 +312,6 @@ class MainActivity : AppCompatActivity() {
                 result.text = expression.text.toString()
             }
         }
-        //забрати з память
         mminus.setOnClickListener {
             val exp = expression.text.toString()
             val engine: ScriptEngine = ScriptEngineManager().getEngineByName("rhino")
@@ -328,7 +326,6 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-        //вивести на еран з памяті
         mr.setOnClickListener {
             if (expression.text.toString().startsWith("0")){
                 if (memory == 0.0){
@@ -352,7 +349,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        //очистити память
         mc.setOnClickListener {
             memory = 0.0
             Toast.makeText(this, "Очищено пам'ять", Toast.LENGTH_SHORT).show()
@@ -365,12 +361,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun  expressionText(str: String){
         expression.text = str
-        if (str.contains("/00") || str.contains("%00") || str.contains("*00") || str.contains("+00") || str.contains("-00") || str.contains("/01") || str.contains("/02") || str.contains("/03") || str.contains("/04") || str.contains("/05") || str.contains("/06") || str.contains("/07") || str.contains("/08") || str.contains("/09") || str.contains("%01") || str.contains("%02") || str.contains("%03") || str.contains("%04") || str.contains("%05") || str.contains("%06") || str.contains("%07") || str.contains("%08") || str.contains("%09") || str.contains("+01") || str.contains("+02") || str.contains("+03") || str.contains("+04") || str.contains("+05") || str.contains("+06") || str.contains("+07") || str.contains("+08") || str.contains("+09") || str.contains("*01") || str.contains("*02") || str.contains("*03") || str.contains("*04") || str.contains("*05") || str.contains("*06") || str.contains("*07") || str.contains("*08") || str.contains("*09") || str.contains("-01") || str.contains("-02") || str.contains("-03") || str.contains("-04") || str.contains("-05") || str.contains("-06") || str.contains("-07") || str.contains("-08") || str.contains(" -09") || str.contains("00.")){
+        val patternTypeData = """(?:[/%*+-]\d{2}| -\d{2}|00\.)""".toRegex()
+        val patternDivideZero = """(/0/|/0%|/0\*|/0-|/0\+)""".toRegex()
+        if (patternTypeData.containsMatchIn(str)){
             Log.e(TAG, "не відповідає жодному типу даних")
             result.text = "Помилка"
             eror = true
         }
-        if (str.contains("/0/") || str.contains("/0%") || str.contains("/0*") || str.contains("/0-") || str.contains("/0+") || str.contains("/0") ){
+        if (patternDivideZero.containsMatchIn(str)){
             Log.e(TAG, "ділення на ноль")
             result.text = "Помилка"
             eror = true

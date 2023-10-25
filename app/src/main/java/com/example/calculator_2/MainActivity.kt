@@ -1,13 +1,14 @@
 package com.example.calculator_2
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import java.util.regex.Pattern
 import javax.script.ScriptEngine
 import javax.script.ScriptEngineManager
 
@@ -361,14 +362,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun  expressionText(str: String){
         expression.text = str
-        val patternTypeData = """(?:[/%*+-]\d{2}| -\d{2}|00\.)""".toRegex()
-        val patternDivideZero = """(/0/|/0%|/0\*|/0-|/0\+)""".toRegex()
-        if (patternTypeData.containsMatchIn(str)){
+        val patternDataType: Pattern = Pattern.compile("[/*%+-]0[0-9]")
+        if (patternDataType.matcher(str).find()){
             Log.e(TAG, "не відповідає жодному типу даних")
             result.text = "Помилка"
             eror = true
+
         }
-        if (patternDivideZero.containsMatchIn(str)){
+        val patternDivideZero: Pattern = Pattern.compile("/0[/|%|*|-|+]?")
+        if (patternDivideZero.matcher(str).find()){
             Log.e(TAG, "ділення на ноль")
             result.text = "Помилка"
             eror = true
@@ -389,19 +391,22 @@ class MainActivity : AppCompatActivity() {
                 val text = res.toString().replace(".0", "")
                if (eror){
                    result.text = "Помилка"
+                   expression.text = "Помилка"
                    Log.e(TAG, "Виведення помилки")
                }else{
-                   result.text = text
+                   result.text = "=$text"
                    Log.d(TAG, "Виведення результату")
                }
             }else{
                 val text = "$res"
                 if (eror){
                     result.text = "Помилка"
+                    expression.text = "Помилка"
                     Log.e(TAG, "Виведення помилки")
                 }else{
-                    result.text = text
+                    result.text = "=$text"
                     Log.d(TAG, "Виведення результату")
+
                 }
             }
         }catch (e: Exception){

@@ -150,12 +150,12 @@ class MainActivity : AppCompatActivity() {
         }
         subtract.setOnClickListener {
             if (expression.text.toString().endsWith("%")|| expression.text.toString().endsWith("/")||expression.text.toString().endsWith("*")||expression.text.toString().endsWith("+")||expression.text.toString().endsWith("-")||expression.text.toString().endsWith(".")){
-            str = expression.text.toString()
-            expressionText(str)
-            Log.d(TAG, "нажато subtract")
-        } else{
-            str = expression.text.toString() + "-"
-            expressionText(str)
+                str = expression.text.toString()
+                expressionText(str)
+                Log.d(TAG, "нажато subtract")
+            } else{
+                str = expression.text.toString() + "-"
+                expressionText(str)
                 Log.d(TAG, "нажато subtract")
             } }
         equal.setOnClickListener {
@@ -389,14 +389,14 @@ class MainActivity : AppCompatActivity() {
             val res = engine.eval(exp)
             if (res.toString().endsWith(".0")){
                 val text = res.toString().replace(".0", "")
-               if (eror){
-                   result.text = "Помилка"
-                   expression.text = "Помилка"
-                   Log.e(TAG, "Виведення помилки")
-               }else{
-                   result.text = "=$text"
-                   Log.d(TAG, "Виведення результату")
-               }
+                if (eror){
+                    result.text = "Помилка"
+                    expression.text = "Помилка"
+                    Log.e(TAG, "Виведення помилки")
+                }else{
+                    result.text = "=$text"
+                    Log.d(TAG, "Виведення результату")
+                }
             }else{
                 val text = "$res"
                 if (eror){
@@ -413,7 +413,6 @@ class MainActivity : AppCompatActivity() {
             expression.text = expression.text.toString()
             result.text = expression.text.toString()
         }
-
     }
 
     companion object{

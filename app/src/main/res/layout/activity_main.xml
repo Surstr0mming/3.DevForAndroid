@@ -87,6 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center|center_vertical"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -106,49 +107,49 @@
                 android:id="@+id/clear"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/operation"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/c"
+                android:textColor="@color/operation"
                 android:textSize="20sp"
-                android:text="@string/c" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/seven"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/num"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/_7"
+                android:textColor="@color/num"
                 android:textSize="20sp"
-                android:text="@string/_7" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/four"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/num"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/_4"
+                android:textColor="@color/num"
                 android:textSize="20sp"
-                android:text="@string/_4" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/num"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/_1"
+                android:textColor="@color/num"
                 android:textSize="20sp"
-                android:text="@string/_1" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/zero"
@@ -164,14 +165,13 @@
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
 
-
-
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -191,63 +191,61 @@
                 android:id="@+id/backSpace"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/operation"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/back"
+                android:textColor="@color/operation"
                 android:textSize="20sp"
-                android:text="@string/back" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/eight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/num"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/_8"
+                android:textColor="@color/num"
                 android:textSize="20sp"
-                android:text="@string/_8" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/five"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/num"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/_5"
+                android:textColor="@color/num"
                 android:textSize="20sp"
-                android:text="@string/_5" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/two"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/num"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/_2"
+                android:textColor="@color/num"
                 android:textSize="20sp"
-                android:text="@string/_2" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/doubleZero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/num"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/_00"
+                android:textColor="@color/num"
                 android:textSize="20sp"
-                android:text="@string/_00" />
-
-
+                android:textStyle="bold" />
 
 
         </LinearLayout>
@@ -256,6 +254,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -275,63 +274,61 @@
                 android:id="@+id/percent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/operation"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/percent"
+                android:textColor="@color/operation"
                 android:textSize="20sp"
-                android:text="@string/percent" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/nine"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/num"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/_9"
+                android:textColor="@color/num"
                 android:textSize="20sp"
-                android:text="@string/_9" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/six"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/num"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/_6"
+                android:textColor="@color/num"
                 android:textSize="20sp"
-                android:text="@string/_6" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/three"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/num"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/_3"
+                android:textColor="@color/num"
                 android:textSize="20sp"
-                android:text="@string/_3" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/dot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/num"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/dot"
+                android:textColor="@color/num"
                 android:textSize="20sp"
-                android:text="@string/dot" />
-
-
+                android:textStyle="bold" />
 
 
         </LinearLayout>
@@ -340,6 +337,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="center"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -359,63 +357,61 @@
                 android:id="@+id/divide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/operation"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/divide"
+                android:textColor="@color/operation"
                 android:textSize="20sp"
-                android:text="@string/divide" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/multiply"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/operation"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/multiply"
+                android:textColor="@color/operation"
                 android:textSize="20sp"
-                android:text="@string/multiply" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/operation"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/plus"
+                android:textColor="@color/operation"
                 android:textSize="20sp"
-                android:text="@string/plus" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/subtract"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/operation"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/minus"
+                android:textColor="@color/operation"
                 android:textSize="20sp"
-                android:text="@string/minus" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/equal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textColor="@color/operation"
-                android:background="@color/black"
-                android:textStyle="bold"
                 android:layout_marginBottom="30dp"
+                android:background="@color/black"
+                android:gravity="center"
+                android:text="@string/equals"
+                android:textColor="@color/operation"
                 android:textSize="20sp"
-                android:text="@string/equals" />
-
-
+                android:textStyle="bold" />
 
 
         </LinearLayout>
